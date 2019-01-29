@@ -118,10 +118,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Archivo.h" />
     <ClInclude Include="caja.h" />
     <ClInclude Include="Ficha.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Archivo.cpp" />
     <ClCompile Include="caja.cpp" />
     <ClCompile Include="Ficha.cpp" />
     <ClCompile Include="main.cpp" />
