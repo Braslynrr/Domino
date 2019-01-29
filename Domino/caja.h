@@ -11,7 +11,6 @@ public:
 	friend std::ostream& operator<<(std::ostream&, Caja*);
 	void Revolver();
 	void intercambia(short int,short int);
-
 private:
 	Ficha** Fichas;
 };
