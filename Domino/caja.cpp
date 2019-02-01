@@ -21,26 +21,26 @@ Caja::~Caja()
 void Caja::Revolver(){
 	srand(static_cast<unsigned int>(time(nullptr)));
 	short int p1=0, p2=0;
-	p1 == rand() % 29;
+	p1 = rand() % 29;
 	intercambia(0, p1);
 	for (short int i = 0; i < 10; i++){
 		p1 = rand() % 29;
-		p2 == rand() % 29;
+		p2 = rand() % 29;
 		intercambia(p1, p2);
 	}
 	for (short int i = 0; i < 5; i++) {
 		p1 = rand() % 10;
-		p2 == rand() % 10;
+		p2 = rand() % 10;
 		intercambia(p1, p2);
 	}
 	for (short int i = 0; i < 5; i++) {
 		p1 = rand() % 10+10;
-		p2 == rand() % 10+10;
+		p2 = rand() % 10+10;
 		intercambia(p1, p2);
 	}
 	for (short int i = 0; i < 5; i++) {
 		p1 = rand() % 8+20;
-		p2 == rand() % 8+20;
+		p2 = rand() % 8+20;
 		intercambia(p1, p2);
 	}
 }

@@ -5,7 +5,6 @@ using std::cin;
 
 int main() {
 	Caja C;
-	C.Revolver();
 	cout << &C;
 	return 0;
 }

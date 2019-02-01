@@ -4,11 +4,15 @@
 class Ficha
 {
 public:
-	Ficha(short int,short int);
+	Ficha(short int,short int,bool=true);
 	~Ficha();
-	friend std::ostream& operator<<(std::ostream&, Ficha*);
+	void setPosicion();
+	bool getPosicion();
+	short int getCara1();
+	short int getCara2();
 private:
 	short int cara1;
 	short int cara2;
+	bool horizontal;
 };
 #endif // !FICHA_H
