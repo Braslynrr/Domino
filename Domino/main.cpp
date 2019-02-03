@@ -1,10 +1,11 @@
 #include "caja.h"
-using std::cout;
-using std::endl;
-using std::cin;
-
+#include "Tablero.h"
 int main() {
 	Caja C;
-	cout << &C;
+	Tablero T;
+	T.VerificaJugada(true, C.darFicha());
+	T.VerificaJugada(false, C.darFicha());
+	T.VerificaJugada(true, C.darFicha());
+	std::cout << T;
 	return 0;
 }

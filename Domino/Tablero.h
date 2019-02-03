@@ -7,7 +7,8 @@ public:
 	Tablero();
 	~Tablero();
 	bool colocarFicha(bool,Ficha*);
-	friend std::ostream& operator<<(std::ostream&,Tablero*);
+	bool VerificaJugada(bool,Ficha*);
+	friend std::ostream& operator<<(std::ostream&, Tablero&);
 private:
 	Ficha** Tabla;
 	short int cantidad;

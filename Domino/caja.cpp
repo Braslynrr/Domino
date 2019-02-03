@@ -9,6 +9,7 @@ Caja::Caja()
 			Fichas[i] = new Ficha(m, n);
 			i++;
 		}
+	Fcantidad = -1;
 }
 
 Caja::~Caja()
@@ -55,9 +56,15 @@ void Caja::intercambia(short int P1, short int P2){
 	Fichas[2] = aux;
 }
 
-std::ostream & operator<<(std::ostream &out, Caja *C)
+Ficha * Caja::darFicha()
 {
-	for (short int i = 0; i < 28; i++)
-	out << C->Fichas[i]<<std::endl;
+	Fcantidad++;
+	return Fichas[Fcantidad];
+}
+
+std::ostream & operator<<(std::ostream &out, Caja &Caja1)
+{
+	for (short int i = 0;i<27; i++)
+		out << Caja1.Fichas[i]->getCara1() << " | " << Caja1.Fichas[i]->getCara2()<<" \n";
 	return out;
 }
