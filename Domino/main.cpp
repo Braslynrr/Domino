@@ -1,11 +1,6 @@
-#include "caja.h"
-#include "Tablero.h"
+#include"Domino.h"
 int main() {
-	Caja C;
-	Tablero T;
-	T.VerificaJugada(true, C.darFicha());
-	T.VerificaJugada(false, C.darFicha());
-	T.VerificaJugada(true, C.darFicha());
-	std::cout << T;
+	Domino domino;
+	domino.jugar();
 	return 0;
 }

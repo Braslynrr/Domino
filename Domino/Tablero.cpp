@@ -45,7 +45,7 @@ bool Tablero::VerificaJugada(bool pos, Ficha *Ficha1)
 	{
 		if (pos)
 		{
-			if (Ficha1->getCara1() == Tabla[0]->getCara1() || Ficha1->getCara2() == Tabla[0]->getCara2()) {
+			if (Ficha1->getCara1() == Tabla[0]->getCara1() || Ficha1->getCara2() == Tabla[0]->getCara1()) {
 				if (Ficha1->getCara1() == Tabla[0]->getCara1())
 					Ficha1->voltearCara();
 				return colocarFicha(pos, Ficha1);
@@ -54,7 +54,7 @@ bool Tablero::VerificaJugada(bool pos, Ficha *Ficha1)
 		}
 		else {
 
-			if (Ficha1->getCara1() == Tabla[cantidad-1]->getCara1() || Ficha1->getCara2() == Tabla[cantidad-1]->getCara2()) {
+			if (Ficha1->getCara1() == Tabla[cantidad-1]->getCara2() || Ficha1->getCara2() == Tabla[cantidad-1]->getCara2()) {
 				if (Ficha1->getCara2() == Tabla[cantidad-1]->getCara2())
 					Ficha1->voltearCara();
 				return colocarFicha(pos, Ficha1);
