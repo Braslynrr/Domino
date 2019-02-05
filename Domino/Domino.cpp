@@ -78,3 +78,11 @@ void Domino::jugar()
 		}
 	}
 }
+
+void Domino::ordenar()
+{
+	
+
+	manita.ordenar();// pd:"prueba mieo que no resulto
+
+}

@@ -18,7 +18,7 @@ Mano::~Mano()
 bool Mano::PedirFicha(Ficha* F)
 {
 	if(F!=nullptr)
-	if (cant<11)
+	if (cant<9)// cambiado de '11' a '9' para evitar el overflow
 	{
 		mano[cant++] = F;
 		return true;
@@ -37,17 +37,23 @@ short int Mano::getCantidad()
 	return cant;
 }
 
-void Mano::ordenar()
+void Mano::ordenar()//metodo de ordenamiento mieo ya que hay otros mas eficaces
 {
-	Ficha* aux;
-	for (short int i = 0; i < cant; i++){
-		if (mano[i + 1] != nullptr && mano[i+1]->getCara1()<mano[i]->getCara1()) {
-			aux = mano[i+1];
-			mano[i + 1] = mano[i];
-			mano[i] = aux;
-			aux = nullptr;
+	short int cantf = cant;
+	while (cantf < 0) {
+
+		Ficha* aux;
+		for (short int i = 0; i < cant - 1; i++) {// "-1" para evitar el desbordamiento del vector
+			if (mano[i + 1] != nullptr && mano[i + 1]->getCara1() < mano[i]->getCara1()) {
+				aux = mano[i + 1];
+				mano[i + 1] = mano[i];
+				mano[i] = aux;
+				aux = nullptr;
+			}
 		}
+	cantf--;
 	}
+	
 }
 
 std::ostream & operator<<(std::ostream &out, Mano *M)
