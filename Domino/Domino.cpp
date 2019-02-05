@@ -17,9 +17,45 @@ void Domino::jugar()
 		{
 		case 'N':
 		case'n':
+		{
+			int jug=0;
+			do {
+				system("cls");
+				cout << "Digite cuantos jugadores jugaran Max(4) \n \t 0 Cancelar\n";
+				if (cin >> jug) {
 
+				}
+				else {
+					system("cls");
+					std::cout << "Caracter invalido" << endl;
+					std::cin.clear();
+					std::cin.ignore(1024, '\n');
+					Sleep(2000);
+				}
+			} while (jug < 2 || jug>5 || jug<0);
 
+			if (jug != 0) {
+				int  djug = 4-jug;
+				if (djug > 0) {
+					do {
+						system("cls");
+						cout << "Digite cuantos IA jugaran Max(" << 4-jug << ") \n \t 0 Cancelar\n";
+						if (cin >> djug) {
+
+						}
+						else {
+							system("cls");
+							std::cout << "Caracter invalido" << endl;
+							std::cin.clear();
+							std::cin.ignore(1024, '\n');
+							Sleep(2000);
+						}
+					} while (djug>4-jug);
+				}
+
+			}
 			break;
+		}
 		case 'C':
 		case 'c':
 
