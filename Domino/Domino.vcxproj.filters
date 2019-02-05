@@ -24,6 +24,12 @@
     <ClInclude Include="Archivo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Tablero.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Domino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -36,6 +42,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Archivo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tablero.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Domino.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

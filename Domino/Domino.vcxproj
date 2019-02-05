@@ -120,13 +120,17 @@
   <ItemGroup>
     <ClInclude Include="Archivo.h" />
     <ClInclude Include="caja.h" />
+    <ClInclude Include="Domino.h" />
     <ClInclude Include="Ficha.h" />
+    <ClInclude Include="Tablero.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Archivo.cpp" />
     <ClCompile Include="caja.cpp" />
+    <ClCompile Include="Domino.cpp" />
     <ClCompile Include="Ficha.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Tablero.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
