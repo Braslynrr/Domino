@@ -18,6 +18,7 @@ void Domino::jugar()
 		case 'N':
 		case'n':
 		{
+			Fichas.Revolver();
 			Jugador* nuevojugador;
 			int jug=0;
 			do {
@@ -40,12 +41,17 @@ void Domino::jugar()
 			std::string Nombre;
 			for (short int i = 0; i < jug; i++) {
 				system("cls");
+				cout << "Digite nombre del jugador #" << i + 1<<"\n";
 				cin >> Nombre;
 				nuevojugador = new Jugador(Nombre);
 				ListaJ.añadirJugador(nuevojugador);
 				nuevojugador = nullptr;
 			}
-
+			ListaJ.getInicio()->Player->getMano()->PedirFicha(Fichas.darFicha());
+			ListaJ.getInicio()->Player->getMano()->PedirFicha(Fichas.darFicha());
+			ListaJ.getInicio()->Player->getMano()->PedirFicha(Fichas.darFicha());
+			cout<<ListaJ.getInicio()->Player->getMano();
+			system("pause");
 			if (jug != 0) {
 				int  djug = 4-jug;
 				if (djug > 0) {
@@ -91,12 +97,4 @@ void Domino::jugar()
 			break;
 		}
 	}
-}
-
-void Domino::ordenar()
-{
-	
-
-	manita.ordenar();// pd:"prueba mieo que no resulto
-
 }

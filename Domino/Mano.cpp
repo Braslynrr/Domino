@@ -59,14 +59,19 @@ void Mano::ordenar()//metodo de ordenamiento mieo ya que hay otros mas eficaces
 std::ostream & operator<<(std::ostream &out, Mano *M)
 {
 	for (short int i = 0; i < M->cant; i++)
-		out<<" ___\t";
+		out<<"  ___\t";
+	out << std::endl;
 	for (short int i = 0; i < M->cant; i++)
-		out << "| " << M->mano[i]->getCara1()<< " |\t";
+		out << " | " << M->mano[i]->getCara1()<< " |\t";
+	out << std::endl;
 	for (short int i = 0; i < M->cant; i++)
 		out << " |___|\t";
+	out << std::endl;
 	for (short int i = 0; i < M->cant; i++)
 		out << " | " << M->mano[i]->getCara2()<< " |\t";
+	out << std::endl;
 	for (short int i = 0; i < M->cant; i++)
 		out << " |___|\t";
+	out << std::endl;
 	return out;
 }

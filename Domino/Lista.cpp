@@ -20,7 +20,7 @@ void Lista::añadirJugador(Jugador* J){
 	}
 	else {
 		struct Nodo* aux=inicio;
-		while (aux!=nullptr)
+		while (aux->next!=nullptr)
 			aux = aux->next;
 		aux->next = nuevo;
 	}
