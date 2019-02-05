@@ -4,6 +4,7 @@
 
 Archivo::Archivo()
 {
+	
 }
 
 
