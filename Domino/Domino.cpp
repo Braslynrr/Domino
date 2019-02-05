@@ -32,10 +32,16 @@ void Domino::jugar()
 					std::cin.ignore(1024, '\n');
 					Sleep(2000);
 				}
-			} while (jug < 2 || jug>5 || jug<0);
+
+				if (jug == 0)
+					break;
+			} while (jug>5 || jug < 2);
 
 			if (jug != 0) {
 				int  djug = 4-jug;
+
+
+
 				if (djug > 0) {
 					do {
 						system("cls");

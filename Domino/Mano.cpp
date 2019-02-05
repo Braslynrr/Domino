@@ -17,6 +17,7 @@ Mano::~Mano()
 
 bool Mano::PedirFicha(Ficha* F)
 {
+	if(F!=nullptr)
 	if (cant<11)
 	{
 		mano[cant++] = F;
@@ -25,13 +26,28 @@ bool Mano::PedirFicha(Ficha* F)
 	return false;
 }
 
-void Mano::EliminarFicha(Ficha *F)
+Ficha* Mano::DarFicha(short int NF)
 {
-	for (short int i = 0; i<cant; i++)
-		if (F == mano[i]) {
-			mano[i] = nullptr;
-			i=cant;
+	cant--;
+	return mano[NF];
+}
+
+short int Mano::getCantidad()
+{
+	return cant;
+}
+
+void Mano::ordenar()
+{
+	Ficha* aux;
+	for (short int i = 0; i < cant; i++){
+		if (mano[i + 1] != nullptr && mano[i+1]->getCara1()<mano[i]->getCara1()) {
+			aux = mano[i+1];
+			mano[i + 1] = mano[i];
+			mano[i] = aux;
+			aux = nullptr;
 		}
+	}
 }
 
 std::ostream & operator<<(std::ostream &out, Mano *M)

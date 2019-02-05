@@ -8,7 +8,9 @@ public:
 	~Mano();
 	bool PedirFicha(Ficha*);
 	friend std::ostream& operator<<(std::ostream&, Mano*);
-	void EliminarFicha(Ficha*);
+	Ficha* DarFicha(short int);
+	short int getCantidad();
+	void ordenar();
 private:
 	Ficha** mano;
 	short int cant;
