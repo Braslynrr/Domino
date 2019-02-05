@@ -12,9 +12,12 @@ public:
 	Domino();
 	~Domino();
 	void jugar();
+	void menuJugadores(short int);
 private:
 	Caja Fichas;
 	Tablero Tabla;
 	Lista ListaJ;
+	bool preparativo;
+	short int turno;
 };
 #endif // !DOMINO_H

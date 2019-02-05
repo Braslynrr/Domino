@@ -10,7 +10,7 @@ Mano::Mano()
 
 Mano::~Mano()
 {
-	for (short int i = 0; i < 10; i++)
+	for (short int i = 0; i < 11; i++)
 		mano[i] = nullptr;
 	delete[] mano;
 }
@@ -18,7 +18,7 @@ Mano::~Mano()
 bool Mano::PedirFicha(Ficha* F)
 {
 	if(F!=nullptr)
-	if (cant<9)// cambiado de '11' a '9' para evitar el overflow
+	if (cant<11)// cambiado de '11' a '9' para evitar el overflow
 	{
 		mano[cant++] = F;
 		return true;
@@ -40,7 +40,7 @@ short int Mano::getCantidad()
 void Mano::ordenar()//metodo de ordenamiento mieo ya que hay otros mas eficaces
 {
 	short int cantf = cant;
-	while (cantf < 0) {
+	while (cantf != 0) {
 
 		Ficha* aux;
 		for (short int i = 0; i < cant - 1; i++) {// "-1" para evitar el desbordamiento del vector
@@ -54,6 +54,26 @@ void Mano::ordenar()//metodo de ordenamiento mieo ya que hay otros mas eficaces
 	cantf--;
 	}
 	
+}
+
+void Mano::eliminarFicha(Ficha *F)
+{
+	for (short int i = 0; i < cant; i++)
+		if (mano[i] == F)
+			mano[i] = nullptr;
+	reacomodar();
+}
+
+void Mano::reacomodar()
+{
+	for (short int i = cant; i < 11; i++){
+		if(mano[i]!=nullptr)
+			for (short int j = 0; j < cant; j++)
+				if (mano[j] == nullptr) {
+					mano[j] = mano[i];
+					mano[i] = nullptr;
+				}
+	}
 }
 
 std::ostream & operator<<(std::ostream &out, Mano *M)
@@ -72,6 +92,9 @@ std::ostream & operator<<(std::ostream &out, Mano *M)
 	out << std::endl;
 	for (short int i = 0; i < M->cant; i++)
 		out << " |___|\t";
+	out << std::endl;
+	for (short int i = 0; i < M->cant; i++)
+		out << "   "<<i+1<<"\t";
 	out << std::endl;
 	return out;
 }

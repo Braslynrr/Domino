@@ -26,6 +26,19 @@ void Lista::añadirJugador(Jugador* J){
 	}
 }
 
+void Lista::eliminarLista()
+{
+	if (inicio != nullptr) {
+		struct Nodo* aux;
+		while (inicio != nullptr) {
+			aux = inicio;
+			inicio = inicio->next;
+			delete aux;
+			aux = nullptr;
+		}
+	}
+}
+
 Nodo * Lista::getInicio()
 {
 	return inicio;

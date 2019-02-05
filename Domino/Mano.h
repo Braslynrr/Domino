@@ -11,6 +11,8 @@ public:
 	Ficha* DarFicha(short int);
 	short int getCantidad();
 	void ordenar();
+	void eliminarFicha(Ficha*);
+	void reacomodar();
 private:
 	Ficha** mano;
 	short int cant;

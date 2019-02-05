@@ -13,6 +13,14 @@ Tablero::~Tablero() {
 	delete Tabla;
 }
 
+void Tablero::LimpiaTablero()
+{
+	for (short int i = 0; i < cantidad; i++){
+		Tabla[i] = nullptr;
+	}
+	cantidad = 0;
+}
+
 bool Tablero::colocarFicha(bool Arriba,Ficha *F)//semi funciona porque habria que invertir ficha
 {
 	if(cantidad<28)

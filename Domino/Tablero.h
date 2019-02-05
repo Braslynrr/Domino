@@ -6,6 +6,7 @@ class Tablero
 public:
 	Tablero();
 	~Tablero();
+	void LimpiaTablero();
 	bool colocarFicha(bool,Ficha*);
 	bool VerificaJugada(bool,Ficha*);
 	friend std::ostream& operator<<(std::ostream&, Tablero&);

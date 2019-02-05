@@ -8,6 +8,7 @@ Jugador::~Jugador(){}
 
 Mano * Jugador::getMano()
 {
+	mano.ordenar();
 	return &mano;
 }
 

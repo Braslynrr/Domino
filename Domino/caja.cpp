@@ -19,6 +19,21 @@ Caja::~Caja()
 	delete[] Fichas;
 }
 
+void Caja::reiniciar()
+{
+	for (int i = 0; i < 28; i++)
+		delete Fichas[i];
+
+	short int i = 0;
+	for (short int m = 0; m < 7; m++)
+		for (short int n = m; n < 7; n++) {
+			Fichas[i] = new Ficha(m, n);
+			i++;
+		}
+
+	Fcantidad = -1;
+}
+
 void Caja::Revolver(){
 	srand(static_cast<unsigned int>(time(nullptr)));
 	short int p1=0, p2=0;
@@ -62,9 +77,14 @@ Ficha * Caja::darFicha()
 	return Fichas[Fcantidad];
 }
 
+short int Caja::getCantidad()
+{
+	return Fcantidad;
+}
+
 std::ostream & operator<<(std::ostream &out, Caja &Caja1)
 {
-	for (short int i = 0;i<27; i++)
+	for (short int i = Caja1.Fcantidad;i<27; i++)
 		out << Caja1.Fichas[i]->getCara1() << " | " << Caja1.Fichas[i]->getCara2()<<" \n";
 	return out;
 }

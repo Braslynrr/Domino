@@ -6,6 +6,7 @@ public:
 	Lista();
 	~Lista();
 	void añadirJugador(Jugador*);
+	void eliminarLista();
 	Nodo* getInicio();
 private:
 	struct Nodo* inicio;
