@@ -122,7 +122,10 @@
     <ClInclude Include="caja.h" />
     <ClInclude Include="Domino.h" />
     <ClInclude Include="Ficha.h" />
+    <ClInclude Include="Jugador.h" />
+    <ClInclude Include="Lista.h" />
     <ClInclude Include="Mano.h" />
+    <ClInclude Include="Nodor.h" />
     <ClInclude Include="Tablero.h" />
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +133,8 @@
     <ClCompile Include="caja.cpp" />
     <ClCompile Include="Domino.cpp" />
     <ClCompile Include="Ficha.cpp" />
+    <ClCompile Include="Jugador.cpp" />
+    <ClCompile Include="Lista.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mano.cpp" />
     <ClCompile Include="Tablero.cpp" />

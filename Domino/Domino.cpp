@@ -18,6 +18,7 @@ void Domino::jugar()
 		case 'N':
 		case'n':
 		{
+			Jugador* nuevojugador;
 			int jug=0;
 			do {
 				system("cls");
@@ -36,12 +37,17 @@ void Domino::jugar()
 				if (jug == 0)
 					break;
 			} while (jug>5 || jug < 2);
+			std::string Nombre;
+			for (short int i = 0; i < jug; i++) {
+				system("cls");
+				cin >> Nombre;
+				nuevojugador = new Jugador(Nombre);
+				ListaJ.añadirJugador(nuevojugador);
+				nuevojugador = nullptr;
+			}
 
 			if (jug != 0) {
 				int  djug = 4-jug;
-
-
-
 				if (djug > 0) {
 					do {
 						system("cls");
@@ -57,7 +63,15 @@ void Domino::jugar()
 							Sleep(2000);
 						}
 					} while (djug>4-jug);
+
+					for (short int i = 0; i < djug; i++){
+						nuevojugador = new Jugador;
+						ListaJ.añadirJugador(nuevojugador);
+						nuevojugador = nullptr;
+					}
 				}
+				//empieza el juego
+
 
 			}
 			break;

@@ -2,6 +2,7 @@
 #define DOMINO_H
 #include "Tablero.h"
 #include"caja.h"
+#include "Lista.h"
 #include <Windows.h>
 using std::cout;
 using std::endl;
@@ -14,5 +15,6 @@ public:
 private:
 	Caja Fichas;
 	Tablero Tabla;
+	Lista ListaJ;
 };
 #endif // !DOMINO_H
